@@ -1,111 +1,183 @@
-# Project CIRO: Disaster Response Agent
+# 🚨 CIRO — Crisis Intelligence & Response Orchestrator
 
-## Team Lead
-**Mahnoor Fatima**  
-(AI Orchestration & Reasoning Design)
+**Google Antigravity Hackathon — Challenge 3**
 
----
-
-# Overview
-CIRO is an agentic disaster response system designed to process emergency reports written in Roman Urdu, analyze disaster severity, and trigger appropriate response actions by cross-referencing real-time IoT sensor data.
-
-The system helps automate emergency handling through intelligent reasoning and decision workflows.
+> An Agentic AI system that ingests multi-source crisis signals, detects emerging situations, generates coordinated response actions, simulates execution, and visualizes impact — powered by Google Antigravity.
 
 ---
 
-# System Architecture & Orchestration
+## 📱 App Screenshots Flow
 
-## Framework
-Google Antigravity Agent Platform
-
-## Core Logic
-The agent processes natural language emergency inputs and applies structured reasoning to generate actionable disaster management responses.
-
----
-
-# Reasoning Workflow
-
-### 1. Input Parsing
-Analyzes Roman Urdu emergency reports submitted by users.
-
-### 2. Context Verification
-Cross-references user reports with simulated IoT sensor feeds such as:
-- Water level monitoring
-- Traffic density analysis
-- Weather conditions
-
-### 3. Severity Classification
-Determines emergency urgency levels:
-- High
-- Medium
-- Low
-
-### 4. Decision Execution
-Triggers suitable disaster-response actions such as:
-- Rerouting traffic
-- Dispatching emergency services
-- Sending alerts and notifications
-
----
-
-# Team Contributions
-
-| Member | Responsibilities |
-|---|---|
-| **Mahnoor Fatima** | AI Orchestration, Reasoning Design, Documentation |
-| **Lokesh Kumar** | Mobile App Development, API Integration |
-| **Muhammad Maooz Khan** | Data Generation, Action Simulation |
-
----
-
-# Deliverables
-
-- Agent Trace Logs
-- README Documentation
-- Working Mobile Prototype
-- Outcome Visualization
-- Demo Video (3–5 mins)
-- Testing & Edge Case Validation
-  
-# Agent System Instructions
-
-```text
-You are a Disaster Response Agent named CIRO.
-
-Your task is to analyze emergency reports written in Roman Urdu such as:
-"Srinagar highway block hai"
-
-Always respond using the following format:
-
-Severity: [High/Medium/Low]
-
-Action: [Reroute Traffic / Dispatch Help]
-
-Location: [Mandi Bahauddin]
-
-Before issuing a High Severity alert, always cross-verify:
-- Water levels
-- Traffic density
-
-using the IoT Sensor Feed provided in the project data.
+```
+[Dashboard] → [Crisis Detail] → [Response Actions] → [Before/After State]
+     ↓               ↓
+[Signal Feed]   [Agent Trace (Antigravity Workflow)]
 ```
 
 ---
 
-# Example Agent Output
+## 🏗️ Folder Structure
 
-## User Input
-```text
-"Srinagar highway block hai aur pani ka level barh raha hai"
+```
+CIRO/
+├── App.js                          # Entry point
+├── index.js                        # React Native register
+├── app.json                        # App config
+├── package.json                    # Dependencies
+│
+└── src/
+    ├── screens/
+    │   ├── DashboardScreen.js      # Home — live crisis overview + weather
+    │   ├── CrisisDetailScreen.js   # Crisis analysis + Before/After visualization
+    │   ├── AgentTraceScreen.js     # Antigravity multi-agent reasoning trace
+    │   └── SignalsScreen.js        # Full signal feed with filtering + NLP processing
+    │
+    ├── services/
+    │   └── apiServices.js          # API integration layer:
+    │                               #   WeatherService    → Google Weather API (simulated)
+    │                               #   MapsService       → Google Maps API (simulated)
+    │                               #   SignalService     → Social/sensor ingestion
+    │                               #   CrisisService     → Crisis detection engine
+    │                               #   ActionService     → Action execution & logging
+    │                               #   AntigravityService→ Google Antigravity orchestration
+    │
+    ├── data/
+    │   └── mockData.js             # Mock signals, crises, resources, agent steps
+    │
+    ├── utils/
+    │   └── helpers.js              # Color maps, formatters, icon maps
+    │
+    ├── navigation/
+    │   └── AppNavigator.js         # Bottom tab + stack navigation
+    │
+    └── assets/                     # Icons, images (add as needed)
 ```
 
-## Agent Response
-```text
-Severity: High
+---
 
-Action: Dispatch Help
+## ⚙️ System Architecture
 
-Location: Mandi Bahauddin
+```
+┌─────────────────────────────────────────────────────────┐
+│                   INPUT LAYER                            │
+│  Social Media │ Weather API │ Google Maps │ IoT Sensors  │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+┌──────────────────────▼──────────────────────────────────┐
+│           GOOGLE ANTIGRAVITY ORCHESTRATION               │
+│                                                          │
+│  Agent 1: Signal Collector  →  Ingest multi-source data  │
+│  Agent 2: NLP Processor     →  Urdu/Roman Urdu/English   │
+│  Agent 3: Crisis Detector   →  Cluster + classify events │
+│  Agent 4: Impact Analyzer   →  Severity + affected pop.  │
+│  Agent 5: Action Planner    →  Generate response plan    │
+│  Agent 6: Execution Agent   →  Simulate actions via APIs │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+┌──────────────────────▼──────────────────────────────────┐
+│                  ACTION LAYER                            │
+│  Traffic Reroute │ Emergency Dispatch │ Public Alerts    │
+│  Emergency Tickets │ Pump Trucks │ Status Updates        │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+┌──────────────────────▼──────────────────────────────────┐
+│              VISUALIZATION LAYER (Mobile App)            │
+│  Dashboard │ Crisis Detail │ Before/After │ Logs         │
+└─────────────────────────────────────────────────────────┘
 ```
 
+---
 
+## 🔌 APIs & Tools Used
+
+| Service | Usage | Status |
+|---------|-------|--------|
+| **Google Antigravity** | Core agent orchestration, multi-step reasoning | ✅ Simulated |
+| **Gemini 2.5 Pro** | NLP, signal classification, decision reasoning | ✅ Simulated |
+| **Google Maps API** | Traffic data, rerouting, alternate routes | ✅ Simulated |
+| **Google Weather API** | Rainfall alerts, weather signals | ✅ Simulated |
+| **Google Places API** | Location resolution for crisis events | ✅ Simulated |
+| **FCM (Firebase)** | Push notifications to affected users | ✅ Simulated |
+
+---
+
+## 📲 How Google Antigravity Is Used
+
+Antigravity serves as the **central brain** of CIRO:
+
+1. **Workflow Orchestration** — Manages 6 sequential agents, each with specific reasoning tasks
+2. **Multi-Agent Reasoning** — Each agent has a defined role; outputs feed into the next agent
+3. **Tool Integration** — Antigravity connects to Maps, Weather, and action APIs
+4. **Traceable Decision Flow** — Every step is logged with timing, confidence, and reasoning
+5. **Execution Management** — Final agent executes actions via tool calls and updates system state
+
+The Agent Trace screen in the app shows the **full Antigravity workplan** in real-time.
+
+---
+
+## 🚀 Setup & Run
+
+### Prerequisites
+- Node.js 18+
+- React Native CLI
+- Android Studio (for Android) / Xcode (for iOS)
+
+### Install & Run
+```bash
+# Clone / extract project
+cd CIRO
+
+# Install dependencies
+npm install
+
+# iOS
+cd ios && pod install && cd ..
+npx react-native run-ios
+
+# Android
+npx react-native run-android
+```
+
+---
+
+## 📋 Key Features
+
+### ✅ Requirement 1: Mobile App
+- Full React Native mobile app
+- 4 screens: Dashboard, Crisis Detail, Agent Trace, Signals
+- Bottom tab navigation
+- Real-time animated UI
+
+### ✅ Requirement 2: API Integration
+- `WeatherService` → Google Weather API
+- `MapsService` → Google Maps + alternate routes
+- `SignalService` → Multi-source signal ingestion
+- `AntigravityService` → Agent orchestration
+
+### ✅ Requirement 3: Working Prototype
+- Processes 5 live signals (social, weather, traffic, infrastructure)
+- Detects 2 active crisis events with confidence scoring
+- Simulates 4 action types: dispatch, reroute, alert, ticket
+- Complete execution log with timestamps
+
+### ✅ Requirement 4: Before vs After Visualization
+- Side-by-side state comparison in Crisis Detail screen
+- 4 state dimensions: Traffic Flow, Road Status, Emergency Teams, Alerts
+- Updates dynamically as actions are executed
+- Outcome summary with impact numbers
+
+---
+
+## 🎯 Assumptions & Limitations
+
+- All external APIs are simulated with realistic mock data (Hackathon scope)
+- Location coordinates are real but data is fictional
+- No real user data is used anywhere
+- Google Antigravity integration is represented via the `AntigravityService` simulation layer
+- In production: replace `src/services/apiServices.js` service simulations with real API keys
+
+---
+
+## 👥 Team
+
+Built for **Google Antigravity Hackathon 2025 — Challenge 3: Crisis Intelligence & Response Orchestrator (CIRO)**
