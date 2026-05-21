@@ -93,7 +93,7 @@ CIRO/
 | Service | Usage | Status |
 |---------|-------|--------|
 | **Google Antigravity** | Core agent orchestration, multi-step reasoning | ✅ Simulated |
-| **Gemini 2.5 Pro** | NLP, signal classification, decision reasoning | ✅ Simulated |
+| **Gemini 3.1_flash_lite** | NLP, signal classification, decision reasoning | ✅ Simulated |
 | **Google Maps API** | Traffic data, rerouting, alternate routes | ✅ Simulated |
 | **Google Weather API** | Rainfall alerts, weather signals | ✅ Simulated |
 | **Google Places API** | Location resolution for crisis events | ✅ Simulated |
