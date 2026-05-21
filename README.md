@@ -180,4 +180,4 @@ npx react-native run-android
 
 ## 👥 Team
 
-Built for **Google Antigravity Hackathon 2025 — Challenge 3: Crisis Intelligence & Response Orchestrator (CIRO)**
+Built for **Google Antigravity Hackathon 2026 — Challenge 3: Crisis Intelligence & Response Orchestrator (CIRO)**
