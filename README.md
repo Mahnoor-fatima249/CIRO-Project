@@ -179,7 +179,8 @@ npx react-native run-android
 ---
 
 ## 👥 Team
-Lokesh Kumar — Frontend Developer
+**Lokesh Kumar — Frontend Developer**
 
-Muhammad Maaz Khan — Frontend Developer
+**Muhammad Maaz Khan — Frontend Developer**
+
 Built for **Google Antigravity Hackathon 2026 — Challenge 3: Crisis Intelligence & Response Orchestrator (CIRO)**
